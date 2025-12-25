@@ -1,0 +1,115 @@
+@import url(../css/fonts.css);
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'barlow';
+    text-decoration: none;
+    list-style: none;
+}
+
+.container{
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #020617;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+.quiz {
+    width: 450px;
+    background: #0f172a;
+    padding: 25px;
+    border-radius: 14px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #94a3b8;
+    margin-bottom: 10px;
+}
+
+.question h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    background: #1e293b;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    cursor: pointer;
+
+    input {
+        display: none;
+    }
+
+    .checkmark {
+        width: 20px;
+        height: 20px;
+        border: 2px solid #94a3b8;
+        border-radius: 4px;
+        margin-right: 10px;
+        position: relative;
+    }
+
+    input:checked+.checkmark {
+        background: #22c55e;
+        border-color: #22c55e;
+
+        &::after {
+            content: "✔";
+            color: #fff;
+            position: absolute;
+            left: 3px;
+            top: -2px;
+            font-size: 16px;
+        }
+    }
+
+    &:hover {
+        background: #334155;
+    }
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+
+    button {
+        background: #2563eb;
+        border: none;
+        padding: 10px 15px;
+        color: #fff;
+        border-radius: 8px;
+        cursor: pointer;
+
+        &:hover {
+            background: #1d4ed8;
+        }
+    }
+}
+
+#result {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 18px;
+}
